@@ -7,16 +7,16 @@ import org.openqa.selenium.WebDriver;
 public class BbcSite {
 
     private WebDriver driver;
-    BbcHomePage bbcHomePage;
-    BbcSignInPage bbcSignInPage;
+    private BbcHomePage bbcHomePage;
+    private BbcSignInPage bbcSignInPage;
 
     public BbcSite(WebDriver driver) {
         this.driver = driver;
         bbcHomePage = new BbcHomePage(driver);
         bbcSignInPage = new BbcSignInPage(driver);
     }
-    public String getCurrentURL(){
-        return driver.getCurrentUrl();
+    public void getCurrentURL(){
+       driver.getCurrentUrl();
     }
     public void quit(){
         driver.quit();

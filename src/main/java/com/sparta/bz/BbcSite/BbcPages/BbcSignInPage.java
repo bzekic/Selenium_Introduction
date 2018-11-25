@@ -23,8 +23,8 @@ public class BbcSignInPage {
         driver.navigate().to(signInPageURL);
     }
 
-    public void inputUserName(String name){
-        driver.findElement(usernameFieldId).sendKeys(name);
+    public void inputUserName(String username){
+        driver.findElement(usernameFieldId).sendKeys(username);
     }
 
     public void inputPassword(String password){
@@ -41,7 +41,7 @@ public class BbcSignInPage {
 
     //page assertion
 
-    public void AssertCurrentURLIsSignInPage(){
+    public void assertCurrentURLIsSignInPage(){
         Assert.assertEquals(driver.getCurrentUrl(), signInPageURL);
     }
 }
